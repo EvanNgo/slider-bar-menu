@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Menu</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"></link>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+  <nav class="js-nav nav active">
+    <div class="nav-body">
+      <div class="nav-header">
+        <div class="nav-header-content">
+          <div class="nav-profile">
+            <p class="nav-profile__ico">EV</p>
+          </div>
+          <div class="nav-name">
+            <p class="nav-name__displayname">Evan Ngô</p>
+            <span class="nav-name__username">@evanngo</span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="nav-content">
+        <div class="nav-search">
+          <div class="nav-search-content">
+            <span class="nav-search__ico"><i class="fas fa-search"></i></span>
+            <input class="nav-search__input" type="text" placeholder="Search...">
+          </div>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav-menu-list">
+            <li class="js-nav-item nav-menu-item active" data-href="#home">
+              <span class="nav-menu-item__ico"><i class="fas fa-home"></i></span>
+              <p class="nav-menu-item__name">Home</p>
+            </li>
+            <li class="js-nav-item nav-menu-item" data-href="#dashboard">
+              <span class="nav-menu-item__ico"><i class="fas fa-tachometer-alt"></i></span>
+              <p class="nav-menu-item__name">Dashboard</p>
+            </li>
+            <li class="js-nav-item nav-menu-item" data-href="#dashboard">
+              <span class="nav-menu-item__ico"><i class="fas fa-project-diagram"></i></span>
+              <p class="nav-menu-item__name">Projects</p>
+            </li>
+            <li class="js-nav-item nav-menu-item" data-href="#dashboard">
+              <span class="nav-menu-item__ico"><i class="fas fa-user"></i></span>
+              <p class="nav-menu-item__name">Members</p>
+            </li>
+            <li class="js-nav-item nav-menu-item" data-href="#dashboard">
+              <span class="nav-menu-item__ico"><i class="fas fa-comments"></i></span>
+              <p class="nav-menu-item__name">Messages</p>
+            </li>
+            <li class="js-nav-item nav-menu-item" data-href="#dashboard">
+              <span class="nav-menu-item__ico"><i class="fas fa-columns"></i></span>
+              <p class="nav-menu-item__name">Workplan</p>
+            </li>
+            <li class="js-nav-item nav-menu-item" data-href="#dashboard">
+              <span class="nav-menu-item__ico"><i class="fas fa-mobile-alt"></i></span>
+              <p class="nav-menu-item__name">Client</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-footer">
+        <ul class="nav-menu-list">
+          <li class="nav-menu-item">
+            <span class="nav-menu-item__ico"><i class="fas fa-sign-out-alt"></i></span>
+            <p class="nav-menu-item__name">Logout</p>
+          </li>
+          <li class="nav-menu-item nav-menu-item--switch">
+            <span class="nav-menu-item__ico"><i class="fas fa-moon"></i></span>
+            <p class="nav-menu-item__name">Darkmode</p>
+            <div class="js-switch-darkmode nav-menu-item__switch"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="js-toggle-nav nav-header__btn"></div>
+  </nav>
+  <script src="./script.js" defer></script>
+</body>
+</html>

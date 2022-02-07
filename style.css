@@ -1,0 +1,272 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  height: 100%;
+  font-family: tahoma;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.nav {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-body {
+  padding: 0 8px;
+  border-right: 1px solid #ddd;
+  overflow: hidden;
+  height: 100%;
+  transition: width ease 0.2s;
+  width: 40px;
+}
+
+/* nav-header */
+
+.nav-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-header-content {
+  display: flex;
+  align-items: center;
+}
+
+.nav-profile {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  border-radius: 5px;
+  background: #0b9b5f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-name {
+  font-size: 16px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-name__username {
+  font-size: 12px;
+  color: #353535;
+}
+
+.nav-header__btn {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  right: -10px;
+  background: #0b9b5f;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.nav-header__btn::after {
+  content: '';
+  top: 6px;
+  right: 5px;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(135deg);
+}
+
+/* END: nav-header */
+
+/* nav-search */
+
+.nav-content {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+}
+
+.nav-search {
+  padding: 8px 0;
+}
+
+.nav-search-content {
+  height: 38px;
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.nav-search__ico {
+  color: #bfbfbf;
+  position: absolute;
+  font-size: 14px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.nav-search__input {
+  background: none;
+  height: 100%;
+  border: 0;
+  outline: none;
+  padding-left: 34px;
+  display: none;
+}
+
+/* END: nav-search */
+
+/* nav-menu */
+
+.nav-menu-item {
+  display: flex;
+  height: 40px;
+  border-radius: 5px;
+  color: #888;
+  margin-bottom: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: all ease 0.1s;
+  align-items: center;
+}
+
+.nav-menu-item__ico {
+  min-width: 40px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-menu-item__name {
+  font-size: 13px;
+  line-height: 40px;
+  display: none;
+}
+
+.nav-menu-item:hover,
+.nav-menu-item.active {
+  background: #0b9b5f;
+  color: #fff;
+}
+
+.nav-menu-item--switch {
+  cursor: default;
+}
+
+.nav-menu-item--switch:hover {
+  background: none;
+  color: #888;
+}
+
+.nav-menu-item__switch {
+  width: 44px;
+  height: 24px;
+  margin-left: auto;
+  border-radius: 14px;
+  background: #ddd;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-menu-item__switch::after {
+  left: 2px;
+  top: 2px;
+  content: '';
+  background: #fff;
+  width: 20px;
+  border-radius: 50%;
+  height: 20px;
+  position: absolute;
+  transition: all ease 0.4s;
+}
+
+.nav-menu-item__switch.active::after {
+  transform: translateX(100%);
+}
+
+/* END: nav-menu */
+
+/* nav-active-mode */
+.nav.active .nav-body {
+  width: 200px;
+}
+
+.nav.active .nav-header__btn {
+  transform: rotate(0);
+}
+
+.nav.active .nav-search__input {
+  display: block;
+}
+
+.nav.active .nav-menu-item__name {
+  display: block;
+}
+
+.nav.active .nav-menu-item__switch {
+  display: block;
+}
+
+/* darkmode */
+
+.dark-mode {
+  background: #2d2d2d;
+}
+
+.dark-mode .nav-body {
+  background: #393939;
+  border-color: #525252;
+}
+
+.dark-mode .nav-header,
+.dark-mode .nav-content {
+  border-color: #525252;
+}
+
+.dark-mode .nav-search-content:hover {
+  border-color: #fff;
+}
+
+.dark-mode .nav-search__input {
+  color: #fff;
+}
+
+.dark-mode .nav-name__displayname {
+  color: #fff;
+}
+
+.dark-mode .nav-name__username {
+  color: #939393;
+}
+
+.dark-mode .nav-menu-item {
+  color: #b1b1b1;
+}
+
+.dark-mode .nav-menu-item:hover,
+.dark-mode .nav-menu-item.active {
+  color: #fff;
+  background: #4a4a4a;
+}
+
+.dark-mode .nav-menu-item__switch.active {
+  background: #0b9b5f;
+}
